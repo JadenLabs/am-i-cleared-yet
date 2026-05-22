@@ -4,7 +4,7 @@ Monitors the SLC Airport badging cleared list and sends a Discord notification w
 
 ## What it does
 
-Every 6 hours (08:00, 14:00, 20:00, 02:00), the script:
+Every morning (06:00, 07:00, 07:10, 08:00 Mountain Time), the script:
 1. Downloads the current cleared PDF from the airport badging office
 2. Searches for your badge number(s) in the table
 3. Sends a Discord embed notification if a match is found
@@ -15,6 +15,8 @@ Every 6 hours (08:00, 14:00, 20:00, 02:00), the script:
 ```bash
 pip install -r requirements.txt
 ```
+
+> Requires Python 3.9+ for `zoneinfo` (timezone) support.
 
 ## Configuration
 

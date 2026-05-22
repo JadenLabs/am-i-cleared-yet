@@ -87,8 +87,8 @@ if __name__ == "__main__":
     run_check()  # Run immediately on startup
 
     scheduler = BlockingScheduler(timezone=ZoneInfo("America/Denver"))
-    for hour in (6, 7, 8):
-        scheduler.add_job(run_check, "cron", hour=hour, minute=0)
+    for hour, minute in ((6, 0), (7, 0), (7, 10), (8, 0)):
+        scheduler.add_job(run_check, "cron", hour=hour, minute=minute)
 
-    log.info("Scheduler started — checks at 06:00, 07:00, 08:00 America/Denver")
+    log.info("Scheduler started — checks at 06:00, 07:00, 07:10, 08:00 America/Denver")
     scheduler.start()
