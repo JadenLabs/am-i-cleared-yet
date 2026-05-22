@@ -1,0 +1,5 @@
+url: https://slcairport.com/badging/assets/pdfDocuments/cleared.pdf
+badge_numbers:
+  - "your_badge_number"
+user_mention: <@YOUR_DISCORD_USER_ID>
+webhook_url: https://discord.com/api/webhooks/...
